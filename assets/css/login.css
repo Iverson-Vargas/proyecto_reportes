@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    background: linear-gradient(to top, #f2f4f7 50% , #198754 50%);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr ;
+    min-height: 100vh;
+}
+
+header{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.formulario{
+  background-color:  #f2f4f7;
+  height: 150%;
+  width: 200%;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.ralla{
+    border: 1px solid black;
+    width: 80%;
+}
+
+.formulario form{
+    width: 80%;
+}
+
+.card-title{
+    position: relative;
+    bottom: 5%;
+}
+
+.tituloPrincipal{
+    position: relative;
+    top: 60%;
+    color: white;
+    font-family: fantasy;
+}
+
+
+main{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form input{
+    height: 40px;
+    width: 100%;
+}
+
+form button{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border-radius: 2px !important; 
+    top: 30px;
+}
