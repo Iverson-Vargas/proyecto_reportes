@@ -107,7 +107,8 @@ class Filters extends BaseFilters
     public array $filters = [
         "ValidarSesion" => [
             "before" => [
-                "/inicio"
+                "/inicio",
+                "/prueba"
             ]
         ]
 

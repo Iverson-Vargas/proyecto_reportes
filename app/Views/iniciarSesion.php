@@ -23,25 +23,52 @@
             <div class="formulario">
                 <h2 class="card-title"><i class="bi bi-person"></i> INICIAR SESIÓN</h2>
                 <hr class="ralla" />
-                <form action="<?php echo base_url('/login'); ?>" method="POST">
+                <!--<form action="<?php echo base_url('/login'); ?>" method="POST">-->
+                <form>
                     <div class="mb-3">
                         <label for="usuario" class="form-label">USUARIO</label>
-                        <input type="text" class="form-control" name="usuario" aria-describedby="emailHelp" required>
+                        <input type="text" class="form-control" name="usuario" id="usuario" aria-describedby="emailHelp" placeholder="Usuario1" required>
                     </div>
                     <div class="mb-3">
                         <label for="contrasena" class="form-label">CONTRASEÑA</label>
-                        <input type="password" class="form-control" name="contrasena" required>
+                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="contraseñan1234" required>
                     </div>
-                    <button type="submit" class="btn btn-success"><i class="bi bi-box-arrow-in-right"></i> INICIAR SESIÓN</button>
+                    <button id="botonLogin" type="button" onclick="validarLogin()" class="btn btn-success"><i class="bi bi-box-arrow-in-right"></i> INICIAR SESIÓN</button>
                 </form>
             </div>
-            
+
 
         </main>
 
     </div>
 
+    <script>
+        function validarLogin() {
+            const loginUrl = "<?= base_url('validarDatos') ?>";
+            const usuario = document.getElementById('usuario').value
+            const contrasena = document.getElementById('contrasena').value
 
+
+            fetch(loginUrl, {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        usuario: usuario,
+                        contrasena: contrasena,
+                    })
+                })
+                .then(response => response.json())
+                .then(respuesta => {
+                    if (respuesta.success) {
+                        window.location.href = '<?= base_url('/inicio'); ?>';
+                    } else {
+                        alert('Error al cargar los cargos.');
+                    }
+                });
+        }
+    </script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 

@@ -1,0 +1,235 @@
+CRITICAL - 2025-06-28 08:57:58 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 08:59:23 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 08:59:23 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 08:59:24 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 08:59:24 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 08:59:24 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:18 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:19 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:19 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:20 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:20 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:20 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:20 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:20 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-28 09:00:48 --> ErrorException: Undefined global variable $_SESSION
+[Method: GET, Route: prueba]
+in APPPATH\Views\plantilla\layout.php on line 21.
+ 1 APPPATH\Views\plantilla\layout.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php', 21)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\plantilla\\layout.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('plantilla/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('prueba', [], true)
+ 6 APPPATH\Controllers\Home.php(16): view('prueba')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->prueba()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-28 09:06:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-28 09:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

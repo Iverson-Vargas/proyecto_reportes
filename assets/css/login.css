@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background: linear-gradient(to top, #f2f4f7 50% , #198754 50%);
+    background: linear-gradient(to top, #F2F4F7 50% , #145943 50% );
 }
 
 .container{
@@ -17,8 +17,12 @@ header{
     justify-items: center;
 }
 
+#botonLogin {
+    background-color: #145943 !important;
+}
+
 .formulario{
-  background-color:  #f2f4f7;
+    background-color: #ffffff;
   height: 150%;
   width: 200%;
   align-items: center;
@@ -47,6 +51,8 @@ header{
     top: 60%;
     color: white;
     font-family: fantasy;
+    letter-spacing: 1px;
+
 }
 
 

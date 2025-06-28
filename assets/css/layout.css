@@ -1,0 +1,88 @@
+body{
+    display: grid;
+    grid-template-columns: minmax(200px, 21%) repeat(2, 1fr);
+    grid-template-rows: 10% repeat(2, 1fr);
+    min-height: 100vh;
+    grid-template-areas: 
+        "nombreSistem menuSuperior menuSuperior"
+        "menuLateral contenido contenido"
+        "menuLateral contenido contenido"
+    ;
+}
+
+
+.menu-superior{
+    background-color: #198754;
+    grid-area: menuSuperior;
+    display: grid;
+    justify-content: end;
+    align-content: center;
+}
+
+#users {
+    position: relative;
+    right: 40%;
+    font-size: 16px;
+}
+
+#users i{
+    font-size: 20px;
+}
+
+.nombre-sistem{
+    color: white;
+    background-color: #145943;
+    grid-area: nombreSistem;
+    display: grid;
+    place-content: center;
+    font-family: fantasy;
+    letter-spacing: 1px;
+}
+
+
+#menu-lateral{
+    display: grid;
+    grid-area: menuLateral;
+    font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif;
+    font-size: 1.3rem;
+}
+
+#menu-lateral li:hover {
+    background-color: #145943;
+    border-radius: 30px;
+}
+
+#repor li a,
+#confi li a {
+    display: inline-block;
+    width: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+        border-radius: 30px;
+
+}
+
+#repor li,
+#confi li {
+    display: inline-block;
+    width: auto;
+    border-radius: 30px;
+}
+
+#repor li a:hover,
+#confi li a:hover{
+    background-color: #23272b;
+    border-radius: 30px;
+}
+
+#repor li:last-child,
+#confi li:last-child {
+    margin-bottom: 8px;
+}
+
+
+.contenido{
+    grid-area: contenido;
+    display: grid;
+    place-content: center;
+}
