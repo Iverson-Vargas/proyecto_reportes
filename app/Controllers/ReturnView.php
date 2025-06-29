@@ -9,10 +9,21 @@ class ReturnView extends BaseController
         return view('inicio');
     }
 
-    public function prueba()
+    public function solicitudes()
     {
         if (session('usuario')) {
-            return view('prueba');
+            $data['titulo'] = 'Solicitudes | SAID SYSTEMS';
+            return view('solicitudes', $data);
+        } else {
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function misSolicitudes()
+    {
+        if (session('usuario')) {
+            $data['titulo'] = 'Mis Solicitudes | SAID SYSTEMS';
+            return view('misSolicitudes', $data);
         } else {
             return redirect()->to(base_url('/'));
         }
@@ -23,7 +34,36 @@ class ReturnView extends BaseController
         if (session('usuario')) {
             return redirect()->to(base_url('/inicio'));
         }
+        $data['titulo'] = 'Iniciar Sesion | SAID SYSTEMS';
+        return view('iniciarSesion', $data);
+    }
 
-        return view('iniciarSesion');
+    public function usuarios()
+    {
+        if (session('usuario')) {
+            $data['titulo'] = 'Usuarios | SAID SYSTEMS';
+            return view('usuarios', $data);
+        } else {
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function cargos()
+    {
+        if (session('usuario')) {
+            $data['titulo'] = 'Cargos | SAID SYSTEMS';
+            return view('cargos', $data);
+        } else {
+            return redirect()->to(base_url('/'));
+        }
+    }
+    public function departamentos()
+    {
+        if (session('usuario')) {
+            $data['titulo'] = 'Departamentos | SAID SYSTEMS';
+            return view('departamentos');
+        } else {
+            return redirect()->to(base_url('/'));
+        }
     }
 }

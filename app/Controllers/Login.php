@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Usuarios;
+use App\Models\Usuario;
 
 class Login extends BaseController
 {
@@ -17,17 +17,17 @@ class Login extends BaseController
             return json_encode(array('success' => false, 'mensaje' => 'el usuario o contraseña no pueden estar vacio'));
         }
 
-        $Usuario = new Usuarios();
-        $datosUsuarios = $Usuario->getUsuario($usuario);
+        $Usuario = new Usuario();
+        $datosUsuario = $Usuario->getUsuario($usuario);
 
-        if (count($datosUsuarios) > 0) {
-            if ($contrasena == $datosUsuarios[0]->contrasena) {
+        if (count($datosUsuario) > 0) {
+            if ($contrasena == $datosUsuario[0]->contrasena) {
                 $data = [
-                    "id" => $datosUsuarios[0]->id,
-                    "usuario" => $datosUsuarios[0]->usuario,
-                    "nombres" => $datosUsuarios[0]->nombres,
-                    "apellidos" => $datosUsuarios[0]->apellidos,
-                    "cargo" => $datosUsuarios[0]->cargo
+                    "id" => $datosUsuario[0]->id,
+                    "usuario" => $datosUsuario[0]->usuario,
+                    "nombres" => $datosUsuario[0]->nombres,
+                    "apellidos" => $datosUsuario[0]->apellidos,
+                    "cargo" => $datosUsuario[0]->cargo
                 ];
                 $session = session();
                 $session->set($data);

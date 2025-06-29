@@ -10,6 +10,38 @@ body{
     ;
 }
 
+#nombre{
+    color: white;
+    font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif;
+}
+
+#nombre:hover{
+    color: #23272b;
+}
+
+.tabla-scroll-vertical {
+    max-height: 400px !important;   /* Ajusta la altura según lo que necesites */
+    overflow-y: auto !important;
+}
+
+.tabla-scroll-vertical table {
+    margin-bottom: 0 !important; /* Quita el margen inferior de la tabla */
+}
+
+#cerrar li a:hover{
+    color: #0d6efd;
+}
+
+#cerrar li a:active,
+#cerrar li a:focus {
+    background-color: transparent !important;
+    color: #23272b;
+}
+
+#nombreUsuario li{
+     font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif;
+}
+
 
 .menu-superior{
     background-color: #198754;
@@ -83,6 +115,4 @@ body{
 
 .contenido{
     grid-area: contenido;
-    display: grid;
-    place-content: center;
 }

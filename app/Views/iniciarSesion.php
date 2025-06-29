@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="assets\css\bootstrap.min.css">
     <link rel="stylesheet" href="assets\css\login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title><?= isset($titulo) ? esc($titulo) : 'SAID SYSTEMS' ;?></title>
+    <link rel="icon" type="image\png" href="assets\img\icon.png">
 
-    <title>Sistema de Reportes</title>
 </head>
 
 <body>
