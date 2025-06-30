@@ -1,7 +1,7 @@
 body{
     display: grid;
-    grid-template-columns: minmax(200px, 21%) repeat(2, 1fr);
-    grid-template-rows: 10% repeat(2, 1fr);
+    grid-template-columns: minmax(200px, 20%) repeat(2, 1fr);
+    grid-template-rows: 9% repeat(2, 1fr);
     min-height: 100vh;
     grid-template-areas: 
         "nombreSistem menuSuperior menuSuperior"
@@ -79,6 +79,34 @@ body{
     font-size: 1.3rem;
 }
 
+#tablaMisSolicitudes,
+#tablaMisSolicitudes th,
+#tablaMisSolicitudes td {
+    font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif !important;
+}
+#tablaSolicitudes,
+#tablaSolicitudes th,
+#tablaSolicitudes td {
+    font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif !important;
+}
+
+#tablaCargo,
+#tablaCargo th,
+#tablaCargo td{
+        font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif !important;
+}
+#tablaUsuario,
+#tablaUsuario th,
+#tablaUsuario td{
+        font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif !important;
+}
+#tablaDepartamento,
+#tablaDepartamento th,
+#tablaDepartamento td{
+        font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif !important;
+}
+
+
 #menu-lateral li:hover {
     background-color: #145943;
     border-radius: 30px;
@@ -115,4 +143,6 @@ body{
 
 .contenido{
     grid-area: contenido;
+    background-color: #ffffff;
+    font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif !important;
 }

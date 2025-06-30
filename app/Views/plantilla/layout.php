@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <title><?= isset($titulo) ? esc($titulo) : 'SAID SYSTEMS'; ?></title>
     <link rel="icon" type="image\png" href="assets\img\icon.png">
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
 </head>
 
 <body>
@@ -23,11 +26,12 @@
                         <i class="bi bi-person-circle"></i> <?php echo session('nombres') . " " . session('apellidos'); ?>
                     </a>
                     <ul id="cerrar" class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">Mis datos</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="" onclick="salir()">Cerrar sesion</a></li>
+                        <li>
+                            <a href="" class="dropdown-item" id="btnCerrar" onclick="salir()">Cerrar sesion</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -44,23 +48,17 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="<?= base_url('/inicio'); ?>" class="nav-link text-white" aria-current="page"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#home"></use>
-                        </svg>
+                    <a href="<?= base_url('/inicio'); ?>" class="nav-link text-white" aria-current="page"><i class="bi-house-door-fill"></i>
                         Inicio
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('/solicitudes'); ?>" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#speedometer2"></use>
-                        </svg>
+                    <a href="<?= base_url('/solicitudes'); ?>" class="nav-link text-white"><i class="bi bi-envelope-fill"></i>
                         Solicitudes
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('/misSolicitudes'); ?>" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#speedometer2"></use>
-                        </svg>
+                    <a href="<?= base_url('/misSolicitudes'); ?>" class="nav-link text-white"><i class="bi bi-send"></i>
                         Mis Solicitudes
                     </a>
                 </li>
@@ -71,9 +69,7 @@
                         aria-expanded="false"
                         aria-controls="confi"
                         style="text-align:left;">
-                        <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#home"></use>
-                        </svg>
+                        <i class="bi-gear-fill" ></i>
                         Configuración
                     </button>
                     <div class="collapse" id="confi">
@@ -103,9 +99,7 @@
                         aria-expanded="false"
                         aria-controls="repor"
                         style="text-align:left;">
-                        <svg class="bi pe-none me-2" width="16" height="16" aria-hidden="true">
-                            <use xlink:href="#home"></use>
-                        </svg>
+                        <i class="bi bi-bar-chart-line-fill"></i>
                         Reportes
                     </button>
                     <div class="collapse" id="repor">
@@ -133,17 +127,17 @@
     </div>
 
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
-    <div id="mensaje" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header" style="background-color: #198754; color: white;">
-        <strong class="me-auto">Mensaje</strong>
-        <small style="color: white;">Ahora</small>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body" style="color: black;">
-        ¡Usuario actualizado correctamente!
-      </div>
+        <div id="mensaje" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header" style="background-color: #198754; color: white;">
+                <strong class="me-auto">Mensaje</strong>
+                <small style="color: white;">Ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" style="color: black;">
+                ¡Usuario actualizado correctamente!
+            </div>
+        </div>
     </div>
-  </div>
 
 
     <main class="contenido">
@@ -169,11 +163,12 @@
                     console.error('Error:', error);
                 });
         }
-
     </script>
 
     <script src="assets\js\bootstrap.bundle.min.js"></script>
     <script src="assets\js\mensaje.js"></script>
+    <script src="//cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    
 
 </body>
 

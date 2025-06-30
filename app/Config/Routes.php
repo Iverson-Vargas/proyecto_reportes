@@ -30,6 +30,13 @@ $routes->post('/EliminarDepartamento', 'EliminarDepartment::eliminarDepartment')
 $routes->post('/CrearCargo', 'CrearPosition::validarCargo');
 $routes->post('/ActualizarCargo', 'ActualizarPosition::updatePosition');
 $routes->post('/EliminarCargo', 'EliminarPosition::eliminarPosition');
+$routes->get('/listadoMisSolicitudes', 'ListarMisSolicitudes::returnSolicitudes');
+$routes->post('/creandoMisolicitud', 'CreateMiSolicitud::validarMiSolicitud');
+$routes->get('/listaFallas', 'ListarFallas::returnFallas');
+$routes->get('/listaSolicitudes', 'ListarSolicitudes::returnSolicitudes');
+$routes->get('/listaTecnicos', 'ListarTecnicos::returnTecnicos');
+$routes->post('/asignarTecnico', 'ActualizarSolicitud::updateSolicitud');
+$routes->post('/finalizarSolicitud', 'FinalizarSolicitud::completarSolicitud');
 
 
 

@@ -6,15 +6,17 @@
     <div class="row mt-3">
         <div class="col-md-12">
             <h3 class="text-center">Cargos</h3>
+            <hr>
             <div id="resultado"></div>
             <button class="btn btn-primary"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#modalAgregarCargo">
+                data-bs-target="#modalAgregarCargo"
+                onclick="LimpiarFormulario()">
                 Agregar Cargo
             </button>
             <div class="tabla-scroll-vertical">
-                <table class="table table-striped table-bordered mt-3">
+                <table id="tablaCargo" class="table table-striped table-bordered mt-3">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -49,11 +51,11 @@
         </div>
     </div>
     <!-- Modal agregar -->
-    <div class="modal fade" id="modalAgregarCargo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalAgregarCargo" tabindex="-1" aria-labelledby="modalAgregarCargo" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Cargo</h1>
+                    <h1 class="modal-title fs-5" id="modalAgregarCargo">Agregar Cargo</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -61,6 +63,8 @@
                         <div class="mb-3">
                             <label for="nombreCargoNuevo" class="form-label">Nombre del Cargo</label>
                             <input type="text" class="form-control" id="nombreCargoNuevo">
+                            <div id="modalAgregarError"></div>
+
                         </div>
                     </form>
                 </div>
@@ -85,6 +89,7 @@
                         <div class="mb-3">
                             <label for="nombreCargoEditar" class="form-label">Nombre del Cargo</label>
                             <input type="text" class="form-control" id="nombreCargoEditar">
+                            <div id="modalActualizarError"></div>
                         </div>
                     </form>
                 </div>
@@ -102,61 +107,103 @@
 
 <?php echo $this->section('scripts'); ?>
 <script>
-    let listadoCargos = [];
+    //let listadoCargos = [];
     let idCargo = 0;
-    window.onload = function() {
-        cargarCargos()
-    }
+    let tabla;
+    // window.onload = function() {
+    //     cargarCargos()
+    // }
 
-    function cargarCargos() {
+    $(document).ready(function() {
+        tabla = $('#tablaCargo').DataTable({
+            ajax: '<?= base_url('listadoCargo'); ?>',
 
-        const url = '<?= base_url('listadoCargo'); ?>';
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                listadoCargos = data.data;
-                if (data.success) {
-                    const cuerpoTabla = document.getElementById('cuerpoTablaCargos');
-                    cuerpoTabla.innerHTML = '';
-                    data.data.forEach(cargo => {
-                        cuerpoTabla.innerHTML += `
-              <tr>
-                <td>${cargo.id}</td>
-                <td>${cargo.nombre}</td>
-                <td>
-                  <button class="btn btn-warning btn-sm" 
-                    type="button"
-                    data-bs-toggle="modal" 
-                    data-bs-target="#modalEditarCargo"
-                    onclick="editarCargo(${cargo.id})"
-                  >
-                    Editar
-                  <button class="btn btn-danger btn-sm ms-2" 
-                      type="button"
-                      data-bs-toggle="modal" 
-                      data-bs-target="#modalEliminarCargo"
-                      onclick="capturarIdcargo(${cargo.id})"
-                    >
-                      Eliminar
-                    </button>
-                </td>
-              </tr>
-            `;
-                    });
-
-                } else {
-
-                    alert("error al cargar los cargos");
-
+            columns: [{
+                    data: 'id'
+                },
+                {
+                    data: 'nombre'
+                },
+                {
+                    data: null, // Para la columna de acciones
+                    orderable: false,
+                    render: function(data, type, row) {
+                        return `
+                            <button class="btn btn-warning btn-sm"
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalEditarCargo"
+                                onclick="editarCargo(${row.id})">
+                                Editar
+                            </button>
+                            <button class="btn btn-danger btn-sm ms-2"
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#modalEliminarCargo"
+                                onclick="capturarIdcargo(${row.id})">
+                                Eliminar
+                            </button>
+                        `;
+                    }
                 }
-            });
-    }
+            ],
+            language: {
+                url: "https://cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json"
+            }
+        });
+
+    });
+
+    // function cargarCargos() {
+
+    //     const url = '<?= base_url('listadoCargo'); ?>';
+    //     fetch(url)
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             listadoCargos = data.data;
+    //             if (data.success) {
+    //                 const cuerpoTabla = document.getElementById('cuerpoTablaCargos');
+    //                 cuerpoTabla.innerHTML = '';
+    //                 data.data.forEach(cargo => {
+    //                     cuerpoTabla.innerHTML += `
+    //           <tr>
+    //             <td>${cargo.id}</td>
+    //             <td>${cargo.nombre}</td>
+    //             <td>
+    //               <button class="btn btn-warning btn-sm" 
+    //                 type="button"
+    //                 data-bs-toggle="modal" 
+    //                 data-bs-target="#modalEditarCargo"
+    //                 onclick="editarCargo(${cargo.id})"
+    //               >
+    //                 Editar
+    //               <button class="btn btn-danger btn-sm ms-2" 
+    //                   type="button"
+    //                   data-bs-toggle="modal" 
+    //                   data-bs-target="#modalEliminarCargo"
+    //                   onclick="capturarIdcargo(${cargo.id})"
+    //                 >
+    //                   Eliminar
+    //                 </button>
+    //             </td>
+    //           </tr>
+    //         `;
+    //                 });
+
+    //             } else {
+
+    //                 alert("error al cargar los cargos");
+
+    //             }
+    //         });
+    // }
 
     function editarCargo(id) {
         ;
         // obtengo el cargo a editar
         idCargo = id;
-        const cargo = listadoCargos.find(c => parseInt(c.id) === id);
+        let datos = tabla.rows().data().toArray();
+        const cargo = datos.find(c => parseInt(c.id) === id);
         if (cargo) {
             // lleno el formulario con los datos del cargo
             const nombreCargo = document.getElementById('nombreCargoEditar');
@@ -181,16 +228,26 @@
             }).then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    alert('Cargo Eliminado correctamente');
-                    cargarCargos();
+                    tabla.ajax.reload();
+                    let modal = bootstrap.Modal.getInstance(document.getElementById('modalEliminarCargo'));
+                    modal.hide();
+
+                    const mensaje = 'EL cargo fue eliminado correctamente';
+                    setTimeout(function() {
+                        toast(mensaje);
+                    }, 500);
+
                 } else {
-                    alert('Error al eliminar el cargo');
+                    const mensaje2 = 'Error al eliminar el cargo';
+                    setTimeout(function() {
+                        toast(mensaje2);
+                    }, 500);
                 }
             });
     }
 
     function agregarCargo() {
-        const url = '<?= base_url('CrearCargo');?>';
+        const url = '<?= base_url('CrearCargo'); ?>';
         const nombreCargo = document.getElementById('nombreCargoNuevo').value;
         if (nombreCargo) {
             fetch(url, {
@@ -204,19 +261,37 @@
                 }).then(response => response.json())
                 .then(data => {
                     if (data.success) {
-                        alert('Cargo creado correctamente');
-                        cargarCargos();
+                        //alert('Cargo creado correctamente');
+                        //cargarCargos();
+                        tabla.ajax.reload();
+                        let modal = bootstrap.Modal.getInstance(document.getElementById('modalAgregarCargo'));
+                        modal.hide();
+                        setTimeout(function() {
+                            var toastEl = document.getElementById('mensaje');
+                            toastEl.querySelector('.toast-body').textContent = '¡Cargo creado correctamente!';
+                            var toast = new bootstrap.Toast(toastEl);
+                            toast.show();
+                        }, 500);
+
                     } else {
-                        alert('Error al crear el cargo');
+                        //alert('Error al crear el cargo');
+                        setTimeout(function() {
+                            var toastEl = document.getElementById('mensaje');
+                            toastEl.querySelector('.toast-body').textContent = '¡Error al crear el departamento!';
+                            var toast = new bootstrap.Toast(toastEl);
+                            toast.show();
+                        }, 500);
                     }
                 });
         } else {
-            alert('Por favor, ingresar un nombre de cargo.');
+            //alert('Por favor, ingresar un nombre de cargo.');
+            let mensaje = document.getElementById('modalAgregarError');
+            mensaje.innerHTML = `<span style="color:red;">¡Por favor, ingresar un nombre de cargo!</span>`;
         }
     }
 
     function actualizarCambios() {
-        const url = '<?= base_url('ActualizarCargo')?>';
+        const url = '<?= base_url('ActualizarCargo') ?>';
         const nombreCargo = document.getElementById('nombreCargoEditar').value;
         if (nombreCargo) {
             fetch(url, {
@@ -231,20 +306,32 @@
                 }).then(response => response.json())
                 .then(data => {
                     if (data.success) {
+                        tabla.ajax.reload();
                         let modal = bootstrap.Modal.getInstance(document.getElementById('modalEditarCargo'));
                         modal.hide();
-                        cargarCargos();
+                        //cargarCargos();
                         const mensaje = 'EL nombre del cargo fue actualizado correctamente'
                         setTimeout(function() {
                             toast(mensaje);
                         }, 500)
                     } else {
-                        alert('Error al actualizar el cargo');
+                        //alert('Error al actualizar el cargo');
+                        const mensaje2 = 'Error al actualizar el nombre del cargo'
+                        setTimeout(function() {
+                            toast(mensaje2)
+                        }, 500);
                     }
                 });
         } else {
-            alert('Por favor, ingresar un nombre de cargo.');
+            //alert('Por favor, ingresar un nombre de cargo.');
+            let error = document.getElementById('modalActualizarError');
+            error.innerHTML = `<span style="color:red;">¡Por favor, ingresar un nombre de departamento!</span>`;
         }
+
+    }
+    
+    function LimpiarFormulario() {
+        document.getElementById('nombreCargoNuevo').value = '';
     }
 </script>
 <?php echo $this->endSection(); ?>

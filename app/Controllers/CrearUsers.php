@@ -19,7 +19,7 @@ class CrearUsers extends BaseController
         $contrasena = $json->contrasena ?? null;
 
         if (empty($usuario) || empty($contrasena) || empty($nombres) || empty($apellidos) || empty($cargo_id) || empty($departamento_id) || empty($rol_id)) {
-            return $this->response->setJSON(['success' => false, 'mensaje' => 'Los datos no pueden estar vacíos']);
+            return $this->response->setJSON(['success' => false, 'message' => 'Los datos no pueden estar vacíos']);
         }
 
         $dato = [

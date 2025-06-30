@@ -5,7 +5,7 @@
     <div class="row mt-3">
         <div class="col-md-12">
             <h3 class="text-center">Listado de usuarios</h3>
-
+            <hr>
             <button class="btn btn-primary"
                 type="button"
                 data-bs-toggle="modal"
@@ -14,7 +14,7 @@
                 Crear usuario
             </button>
             <div class="tabla-scroll-vertical">
-                <table class="table table-striped table-bordered mt-3">
+                <table id="tablaUsuario" class="table table-striped table-bordered mt-3">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -26,9 +26,9 @@
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody id="cuerpoTablausuarios">
+                    <!-- <tbody id="cuerpoTablausuarios">
                         <!-- Los datos se llenarán con JavaScript -->
-                    </tbody>
+                    <!-- </tbody> -->
                 </table>
             </div>
         </div>
@@ -101,8 +101,8 @@
                     </div>
                 </div>
 
-                <h3 class="text-center">Datos de acceso</h3>
                 <hr>
+                <h3 class="text-center" style="margin-bottom: 20px;">Datos de acceso</h3>
 
                 <div class="row">
                     <div class="col-md-6">
@@ -134,51 +134,95 @@
 
     <?php echo $this->section('scripts'); ?>
 
+
+
     <script>
+        let tabla;
         let listadodeUsuarios = [];
         let esEditar = false;
         let idUsuarior = 0;
         window.onload = function() {
-            listarUsuarios(1);
+            //listarUsuarios(1);
             listarCargos();
             listarDepartamentos();
             listarRoles();
         }
 
-        function listarUsuarios() {
-            const url = '<?= base_url('listadoUsuarios'); ?>?usuario_estado_id=1';
-            fetch(url)
-                .then(response => response.json())
-                .then(respuesta => {
-                    listadodeUsuarios = respuesta.data;
-                    if (respuesta.success) {
-                        var tbody = document.getElementById('cuerpoTablausuarios');
-                        tbody.innerHTML = '';
-                        respuesta.data.forEach(usuario => {
-                            var tr = document.createElement('tr');
-                            tr.innerHTML = `
-                      <td>${usuario.id}</td>
-                      <td>${usuario.nombres}</td>
-                      <td>${usuario.apellidos}</td>
-                      <td>${usuario.cargo}</td>
-                      <td>${usuario.departamento}</td>
-                      <td>${usuario.rol}</td>
-                      <td>
-                        <button class="btn btn-warning btn-sm" onclick="editarUsuario(${usuario.id})">Editar</button>
-                        <button class="btn btn-danger btn-sm" type="button" onclick="capturarIdUsuario(${usuario.id})" data-bs-toggle="modal" data-bs-target="#modalEliminarUsuario">Eliminar</button>
-                      </td>
-                    `;
-                            tbody.appendChild(tr);
-                        });
+        $(document).ready(function() {
+            console.log("ready!");
+            tabla = $('#tablaUsuario').DataTable({
+                ajax: '<?= base_url('listadoUsuarios'); ?>',
 
-                    } else {
-                        alert('Error al cargar los usuarios.');
+                columns: [{
+                        data: 'id'
+                    },
+                    {
+                        data: 'nombres'
+                    },
+                    {
+                        data: 'apellidos'
+                    },
+                    {
+                        data: 'cargo'
+                    },
+                    {
+                        data: 'departamento'
+                    },
+                    {
+                        data: 'rol'
+                    },
+                    {
+                        data: null, // Para la columna de acciones
+                        orderable: false,
+                        render: function(data, type, row) {
+                            return `<div style="display:flex;gap:0.5rem;">
+                                <button class="btn btn-warning btn-sm" onclick="editarUsuario(${row.id})">Editar</button>
+                                <button class="btn btn-danger btn-sm" type="button" onclick="capturarIdUsuario(${row.id})" data-bs-toggle="modal" data-bs-target="#modalEliminarUsuario">Eliminar</button>
+                            </div>`;
+                        }
                     }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        }
+                ],
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json"
+                }
+            });
+
+        });
+
+        // function listarUsuarios() {
+        //     const url = '<?= base_url('listadoUsuarios'); ?>?usuario_estado_id=1';
+        //     fetch(url)
+        //         .then(response => response.json())
+        //         .then(respuesta => {
+        //             listadodeUsuarios = respuesta.data;
+        //             if (respuesta.success) {
+        //                 var tbody = document.getElementById('cuerpoTablausuarios');
+        //                 tbody.innerHTML = '';
+        //                 respuesta.data.forEach(usuario => {
+        //                     var tr = document.createElement('tr');
+        //                     tr.innerHTML = `
+        //               <td>${usuario.id}</td>
+        //               <td>${usuario.nombres}</td>
+        //               <td>${usuario.apellidos}</td>
+        //               <td>${usuario.cargo}</td>
+        //               <td>${usuario.departamento}</td>
+        //               <td>${usuario.rol}</td>
+        //               <td>
+        //                 <button class="btn btn-warning btn-sm" onclick="editarUsuario(${usuario.id})">Editar</button>
+        //                 <button class="btn btn-danger btn-sm" type="button" onclick="capturarIdUsuario(${usuario.id})" data-bs-toggle="modal" data-bs-target="#modalEliminarUsuario">Eliminar</button>
+        //               </td>
+        //             `;
+        //                     tbody.appendChild(tr);
+        //                 });
+
+        //             } else {
+        //                 alert('Error al cargar los usuarios.');
+        //             }
+        //         })
+        //         .catch(error => {
+        //             console.error('Error:', error);
+        //         });
+        // }
 
 
         function capturarIdUsuario(id) {
@@ -186,9 +230,13 @@
         }
 
         function editarUsuario(id) {
+            console.log(id);
             esEditar = true;
             idUsuario = id;
-            const user = listadodeUsuarios.find(usuario => parseInt(usuario.id, 10) === id);
+            // const user = listadodeUsuarios.find(usuario => parseInt(usuario.id, 10) === id);
+            var datos = tabla.rows().data().toArray();
+            const user = datos.find(usuario => parseInt(usuario.id, 10) === id);
+            console.log(user);
             if (user) {
                 document.getElementById('nombres').value = user.nombres;
                 document.getElementById('apellidos').value = user.apellidos;
@@ -329,7 +377,8 @@
                 .then(respuesta => {
                     btnGuardar.disabled = false;
                     if (respuesta.success) {
-                        listarUsuarios();
+                        tabla.ajax.reload();
+                        //listarUsuarios();
                         // Cerrar el modal usando Bootstrap 5 API
                         var modal = bootstrap.Modal.getInstance(document.getElementById('modalCrearUsuario'));
                         modal.hide();
@@ -381,7 +430,8 @@
                 .then(response => response.json())
                 .then(respuesta => {
                     if (respuesta.success) {
-                        listarUsuarios();
+                        tabla.ajax.reload();
+                        //listarUsuarios();
                         // Cerrar el modal usando Bootstrap 5 API
                         var modal = bootstrap.Modal.getInstance(document.getElementById('modalCrearUsuario'));
                         modal.hide();
@@ -415,7 +465,8 @@
                 .then(response => response.json())
                 .then(respuesta => {
                     if (respuesta.success) {
-                        listarUsuarios(1);
+                        //listarUsuarios(1);
+                        tabla.ajax.reload();
                         // Cerrar el modal usando Bootstrap 5 API
                         var modal = bootstrap.Modal.getInstance(document.getElementById('modalEliminarUsuario'));
                         modal.hide();
