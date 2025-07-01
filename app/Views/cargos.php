@@ -3,7 +3,7 @@
 
 <div class="container">
 
-    <div class="row mt-3">
+    <div style="margin-bottom: 10px;" class="row mt-3">
         <div class="col-md-12">
             <h3 class="text-center">Cargos</h3>
             <hr>

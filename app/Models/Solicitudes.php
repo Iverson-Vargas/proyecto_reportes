@@ -31,4 +31,42 @@ class Solicitudes extends Model
         $builder = $this->db->table('solicitudes');
         return $builder->where('id', $id)->update($datos);
     }
+
+    public function getSolicitudesConDetalles(): array
+    {
+        $builder = $this->db->table('solicitudes as s');
+        $builder->select('
+            s.id AS solicitud_id,
+            s.descripcion,
+            s.fecha,
+            d.nombre AS departamento_nombre,
+            CONCAT(u.nombres, " ", u.apellidos) AS nombre_solicitante
+        ');
+        $builder->join('usuarios as u', 's.solicitante_id = u.id', 'inner');
+        $builder->join('departamentos as d', 'u.departamento_id = d.id', 'inner');
+        $builder->orderBy('d.nombre', 'ASC');
+        $builder->orderBy('s.fecha', 'DESC');
+
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
+
+    public function getSolicitudesConTipoFalla(): array
+    {
+        $builder = $this->db->table('solicitudes as s');
+        $builder->select('
+            s.id AS solicitud_id,
+            s.descripcion,
+            s.fecha,
+            tf.nombre AS tipo_falla_nombre,
+            CONCAT(u.nombres, " ", u.apellidos) AS nombre_solicitante
+        ');
+        $builder->join('tipos_fallas as tf', 's.tipo_falla_id = tf.id', 'inner');
+        $builder->join('usuarios as u', 's.solicitante_id = u.id', 'inner');
+        $builder->orderBy('tf.nombre', 'ASC');
+        $builder->orderBy('s.fecha', 'DESC');
+
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
 }

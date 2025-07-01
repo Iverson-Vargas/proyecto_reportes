@@ -37,6 +37,13 @@ $routes->get('/listaSolicitudes', 'ListarSolicitudes::returnSolicitudes');
 $routes->get('/listaTecnicos', 'ListarTecnicos::returnTecnicos');
 $routes->post('/asignarTecnico', 'ActualizarSolicitud::updateSolicitud');
 $routes->post('/finalizarSolicitud', 'FinalizarSolicitud::completarSolicitud');
+$routes->get('/reporte-1', 'ReturnView::reporte1');
+$routes->get('/reporte-2', 'ReturnView::reporte2');
+$routes->get('/reporte-3', 'ReturnView::reporte3');
+$routes->get('/reporte1TipoFallas', 'ListarTipoFallas::returnTiposFallas');
+$routes->get('/reporte2TipoFallasDepartamento', 'ListarTipoFallas::fallasPorDepartamento');
+$routes->get('/SolicitudesPorDepartamento', 'ListarSolicitudes::returnSolicitudesPorDepartamento');
+$routes->get('/SolicitudesPorTipoFallas', 'ListarSolicitudes::returnSolicitudesPortipoFallas');
 
 
 

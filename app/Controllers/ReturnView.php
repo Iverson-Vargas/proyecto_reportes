@@ -61,7 +61,37 @@ class ReturnView extends BaseController
     {
         if (session('usuario')) {
             $data['titulo'] = 'Departamentos | SAID SYSTEMS';
-            return view('departamentos');
+            return view('departamentos', $data);
+        } else {
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function reporte1()
+    {
+        if (session('usuario')) {
+            $data['titulo'] = 'Reporte 1 | SAID SYSTEMS';
+            return view('reporte1', $data);
+        } else {
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function reporte2()
+    {
+        if (session('usuario')) {
+            $data['titulo'] = 'Reporte 2 | SAID SYSTEMS';
+            return view('reporte2', $data);
+        } else {
+            return redirect()->to(base_url('/'));
+        }
+    }
+
+    public function reporte3()
+    {
+        if (session('usuario')) {
+            $data['titulo'] = 'Reporte 3 | SAID SYSTEMS';
+            return view('reporte3', $data);
         } else {
             return redirect()->to(base_url('/'));
         }

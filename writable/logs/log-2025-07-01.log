@@ -1,0 +1,144 @@
+CRITICAL - 2025-07-01 01:25:55 --> TypeError: array_keys(): Argument #1 ($array) must be of type array, stdClass given
+[Method: GET, Route: reporte1TipoFallas]
+in APPPATH\Controllers\ListarTipoFallas.php on line 28.
+ 1 APPPATH\Controllers\ListarTipoFallas.php(28): array_keys(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListarTipoFallas->returnTiposFallas()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListarTipoFallas))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 01:26:36 --> TypeError: array_keys(): Argument #1 ($array) must be of type array, stdClass given
+[Method: GET, Route: reporte1TipoFallas]
+in APPPATH\Controllers\ListarTipoFallas.php on line 28.
+ 1 APPPATH\Controllers\ListarTipoFallas.php(28): array_keys(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListarTipoFallas->returnTiposFallas()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListarTipoFallas))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 01:28:45 --> TypeError: array_keys(): Argument #1 ($array) must be of type array, stdClass given
+[Method: GET, Route: reporte1TipoFallas]
+in APPPATH\Controllers\ListarTipoFallas.php on line 28.
+ 1 APPPATH\Controllers\ListarTipoFallas.php(28): array_keys(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListarTipoFallas->returnTiposFallas()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListarTipoFallas))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 01:29:15 --> TypeError: array_keys(): Argument #1 ($array) must be of type array, stdClass given
+[Method: GET, Route: reporte1TipoFallas]
+in APPPATH\Controllers\ListarTipoFallas.php on line 28.
+ 1 APPPATH\Controllers\ListarTipoFallas.php(28): array_keys(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListarTipoFallas->returnTiposFallas()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListarTipoFallas))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 01:31:19 --> TypeError: array_keys(): Argument #1 ($array) must be of type array, stdClass given
+[Method: GET, Route: reporte1TipoFallas]
+in APPPATH\Controllers\ListarTipoFallas.php on line 28.
+ 1 APPPATH\Controllers\ListarTipoFallas.php(28): array_keys(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListarTipoFallas->returnTiposFallas()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListarTipoFallas))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 01:31:25 --> TypeError: array_keys(): Argument #1 ($array) must be of type array, stdClass given
+[Method: GET, Route: reporte1TipoFallas]
+in APPPATH\Controllers\ListarTipoFallas.php on line 28.
+ 1 APPPATH\Controllers\ListarTipoFallas.php(28): array_keys(Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListarTipoFallas->returnTiposFallas()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListarTipoFallas))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 03:33:16 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: reporte-2]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\reporte2.php(144): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\reporte2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('reporte2', [], true)
+ 5 APPPATH\Controllers\ReturnView.php(84): view('reporte2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReturnView->reporte2()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnView))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 03:33:18 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: reporte-2]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\reporte2.php(144): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\reporte2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('reporte2', [], true)
+ 5 APPPATH\Controllers\ReturnView.php(84): view('reporte2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReturnView->reporte2()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnView))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 03:33:18 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: reporte-2]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\reporte2.php(144): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\reporte2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('reporte2', [], true)
+ 5 APPPATH\Controllers\ReturnView.php(84): view('reporte2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReturnView->reporte2()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnView))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 03:33:18 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: reporte-2]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\reporte2.php(144): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\reporte2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('reporte2', [], true)
+ 5 APPPATH\Controllers\ReturnView.php(84): view('reporte2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReturnView->reporte2()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnView))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 03:33:19 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: reporte-2]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\reporte2.php(144): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\reporte2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('reporte2', [], true)
+ 5 APPPATH\Controllers\ReturnView.php(84): view('reporte2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReturnView->reporte2()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnView))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-01 03:33:34 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: reporte-2]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\reporte2.php(144): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\PHP-IVERSON\\proyecto_reportes\\app\\Views\\reporte2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('reporte2', [], true)
+ 5 APPPATH\Controllers\ReturnView.php(84): view('reporte2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReturnView->reporte2()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturnView))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

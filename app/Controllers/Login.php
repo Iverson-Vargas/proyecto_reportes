@@ -27,8 +27,10 @@ class Login extends BaseController
                     "usuario" => $datosUsuario[0]->usuario,
                     "nombres" => $datosUsuario[0]->nombres,
                     "apellidos" => $datosUsuario[0]->apellidos,
-                    "cargo" => $datosUsuario[0]->cargo
+                    "cargo" => $datosUsuario[0]->cargo,
+                    "rol" => $datosUsuario[0]->rol
                 ];
+                
                 $session = session();
                 $session->set($data);
                 return json_encode(array('success' => true, 'mensaje' => 'datos correcto'));

@@ -17,8 +17,9 @@ class Usuario extends Model
     public function getUsuario($usuario)
     {
         $builder = $this->db->table('usuarios');
-        $builder->select('usuarios.*, cargos.nombre AS cargo');
+        $builder->select('usuarios.*, cargos.nombre AS cargo, roles.nombre AS rol');
         $builder->join('cargos', 'cargos.id = usuarios.cargo_id', 'left');
+        $builder->join('roles', 'roles.id = usuarios.rol_id', 'left');
         $builder->where('usuarios.usuario', $usuario);
         $query = $builder->get();
         return $query->getResultObject();

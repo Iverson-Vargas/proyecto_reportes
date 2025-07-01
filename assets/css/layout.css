@@ -2,12 +2,82 @@ body{
     display: grid;
     grid-template-columns: minmax(200px, 20%) repeat(2, 1fr);
     grid-template-rows: 9% repeat(2, 1fr);
-    min-height: 100vh;
+    height: 100vh;
     grid-template-areas: 
         "nombreSistem menuSuperior menuSuperior"
         "menuLateral contenido contenido"
         "menuLateral contenido contenido"
     ;
+    overflow: hidden;
+}
+
+.parrafo{
+    background-color: #f5f5f4;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.contenedor-graficoPastel{
+    margin-top: 50px !important;
+    position: relative; 
+    max-width: 520px; 
+    margin: 80px auto !important; 
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    height: 530px;
+}
+
+.bienvenida-container {
+    background-color: #198754;    
+    color: #ffffff;            
+    padding: 40px 30px;            
+    border-radius: 8px;
+    text-align: center;             
+    margin: 40px 0;         
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.bienvenida-container h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.bienvenida-container p {
+    font-size: 1.1rem;
+    max-width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9; 
+}
+.contenedor-graficoPastel2{
+    position: relative; 
+    max-width: 500px; 
+    margin: 40px auto; 
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    height: 510px;
+}
+.contenedor-graficoBarras{
+    position: relative; 
+    max-width: 1000px; 
+    margin: 40px auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      
+
+}
+.contenedor-graficoBarras2{
+    position: relative; 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+#iTresRallas{
+    color: white !important;
+    display: grid;
+    position: relative;
+    right: 950px;
+    align-content: center;
 }
 
 #nombre{
@@ -17,15 +87,6 @@ body{
 
 #nombre:hover{
     color: #23272b;
-}
-
-.tabla-scroll-vertical {
-    max-height: 400px !important;   /* Ajusta la altura según lo que necesites */
-    overflow-y: auto !important;
-}
-
-.tabla-scroll-vertical table {
-    margin-bottom: 0 !important; /* Quita el margen inferior de la tabla */
 }
 
 #cerrar li a:hover{
@@ -145,4 +206,5 @@ body{
     grid-area: contenido;
     background-color: #ffffff;
     font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, sans-serif !important;
+    overflow-y: auto;
 }

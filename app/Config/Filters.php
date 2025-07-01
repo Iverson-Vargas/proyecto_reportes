@@ -112,7 +112,10 @@ class Filters extends BaseFilters
                 "misSolicitudes",
                 "usuarios",
                 "cargos",
-                "departamentos"
+                "departamentos",
+                "reporte1",
+                "reporte2",
+                "reporte3"
             ]
         ]
 
