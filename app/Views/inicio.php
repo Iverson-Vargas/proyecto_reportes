@@ -14,7 +14,7 @@
 <div style="display: grid; justify-content: center;
     align-content: center;">
 
-    <a href="http://127.0.0.1:3000/pagina.html" target="_blank" style="font-size: 20px;" class="btn btn-primary ">Conoce más sobre el sistema</a>
+    <a href="http://127.0.0.1:3000/paginaInformacion/pagina.html" target="_blank" style="font-size: 20px;" class="btn btn-primary ">Conoce más sobre el sistema</a>
 </div>
 
 <?php echo $this->endSection(); ?>
